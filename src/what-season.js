@@ -30,7 +30,7 @@ export default function getSeason(date) {
     return 'Unable to determine the time of year!';
   }
   let parsedDate = new Date(date);
-  if ('Invalid Date' === parsedDate.toString()) {
+  if ('Invalid Date' == parsedDate.toString() || typeof date === 'number') {
     throw new Error('Invalid date!');
   }
   return monthsMap[parsedDate.getMonth()];
