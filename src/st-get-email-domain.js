@@ -11,5 +11,6 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function getEmailDomain(email) {
-  
+  let parts = email.split('@');
+  return parts[parts.length - 1]
 }
